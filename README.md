@@ -1,2 +1,2 @@
 # ACAT
-Automated Comprehensibility Assessment
+Automated Comprehensibility Assessment Tool
