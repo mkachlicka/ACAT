@@ -2,13 +2,13 @@
 
 # Automated Comprehensibility Assessment Tool (A-CAT)
 
-[Description]
+[Description] for MK to write up
 
 
 
-[Instruction]
+[Instruction] for MK to write up
 
 
 
 
-[Interpretation of results]
+[Interpretation of results] for MK to write up
