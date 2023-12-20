@@ -1,1 +1,3 @@
-## Info about the datasets TBC
+## Info about the datasets
+
+1. Japanese (N=200)
