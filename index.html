@@ -119,14 +119,67 @@
   #theme:hover { 
     border-color:var(--accent); }
 
-  .cite-box { border:1px solid var(--line); border-radius:6px; margin:1em 0; }
-  .cite-tabs { display:flex; border-bottom:1px solid var(--line); }
-  .cite-tabs button { flex:1; padding:8px; border:0; background:none; color:var(--muted); font:15px sans-serif; cursor:pointer; }
-  .cite-tabs button.active { color:var(--fg); border-bottom:2px solid var(--accent); font-weight:bold; }
-  .cite-body { position:relative; padding:14px; }
-  .cite-body pre { margin:0; white-space:pre-wrap; background:none; padding:0 60px 0 0; }
-  #copy-cite { position:absolute; top:8px; right:8px; padding:4px 12px; border:1px solid var(--line); border-radius:14px; background:var(--bg); color:var(--fg); font:13px sans-serif; cursor:pointer; }
-  #copy-cite:hover { border-color:var(--accent); }
+  .cite-box { 
+    border:1px solid var(--line); 
+    order-radius:6px; 
+    margin:1em 0; }
+
+  .cite-tabs { 
+    display:flex; 
+    border-bottom:1px solid var(--line); }
+
+  .cite-tabs button { 
+    flex:1; 
+    padding:8px; 
+    border:0; 
+    background:none; 
+    color:var(--muted); 
+    font:15px sans-serif; 
+    cursor:pointer; }
+
+  .cite-tabs button.active { 
+    color:var(--fg); 
+    border-bottom:2px solid var(--accent); 
+    font-weight:bold; }
+
+  .cite-body { 
+    position:relative; 
+    padding:14px; }
+
+  .cite-body pre { 
+    margin:0; 
+    white-space:pre-wrap; 
+    background:none; 
+    padding:0 60px 0 0; }
+
+  #copy-cite { 
+    position:absolute; 
+    top:8px; 
+    right:8px; 
+    padding:4px 12px; 
+    border:1px solid var(--line); 
+    border-radius:14px; 
+    background:var(--bg); 
+    color:var(--fg); 
+    font:13px sans-serif; 
+    cursor:pointer; }
+
+  #copy-cite:hover { 
+    border-color:var(--accent); }
+
+  .dl-buttons a {
+    display:inline-block;
+    margin:4px 8px 4px 0;
+    padding:8px 18px;
+    border-radius:20px;
+    background:var(--accent);
+    color:#fff;
+    text-decoration:none;
+    font:15px sans-serif; }
+
+  .dl-buttons a:hover {
+    background:var(--btn);
+    color:var(--btn-fg); }
 
 </style>
 
@@ -162,31 +215,65 @@
   <!--<a href="https://github.com/mkachlicka/ACAT/blob/main/acat_clean_final.ipynb">Notebook</a>-->
 </p>
 
-<!-- 1. Video (GIF loaded straight from your GitHub repo; change the file name if you want a different GIF) -->
+<!-- 1. Intro video (GIF loaded from GitHub repo) -->
 <figure>
   <img src="https://raw.githubusercontent.com/mkachlicka/ACAT/main/images/acatlogo.gif" alt="A-CAT demo">
   <!--<figcaption>TBC.</figcaption>-->
 </figure>
 
-<!-- 2. Description -->
-<h2>Description</h2>
-<p>Describe what A-CAT is, what it takes as input, and what it returns. Two or three short paragraphs.</p>
-
-<!-- 3. Abstract -->
+<!-- 2. Description/abstract -->
 <h2>Abstract</h2>
-<p>Paste your abstract here.</p>
+<p>Comprehensibility, or listeners’ perceived ease of understanding second language (L2) speech, is a central construct in L2 speech research. However, collecting comprehensibility ratings is very time-consuming, labour-intensive, and difficult to scale, as each new dataset typically requires the recruitment of listener panels and the administration of rating sessions. Here, we present the Automated Comprehensibility Assessment Tool (A-CAT), a transparent and locally usable tool for automated assessment of L2 speech comprehensibility. Unlike commercially restricted or black-box automated assessment systems, A-CAT uses a small set of theoretically motivated acoustic predictors indexing segmental, prosodic, and fluency dimensions of spontaneous speech. A-CAT is distributed as a standalone application and can be run locally without programming knowledge or uploading speech data to external servers. The tool provides L2 speech researchers with a practical, interpretable, and privacy-conscious method for estimating comprehensibility from spontaneous speech. </p>
 
-<!-- 4. Guide with pictures -->
-<h2>How to use</h2>
+<!-- 3. Guide with pictures -->
+<h2>How to use A-CAT app</h2>
 
-<h3>Step 1. Get the code</h3>
-<p>Short explanation.</p>
-<pre>git clone https://github.com/mkachlicka/ACAT.git</pre>
-<figure><img src="images/step1.png" alt="Step 1"><figcaption>What you should see.</figcaption></figure>
+<h3>Step 1. Download the app for your operating system.</h3>
+<p>Please click one of the buttons below. Download should start automatically.</p>
+<!--<p class="dl-buttons">
+  <a href="https://github.com/mkachlicka/ACAT/raw/main/app/ACAT-macOS.zip" download>Download app for Mac OS</a>
+  <a href="https://github.com/mkachlicka/ACAT/raw/main/app/ACAT-Windows.zip" download>Download app for Windows</a>
+  <a href="https://github.com/mkachlicka/ACAT/raw/main/app/ACAT-Linux.zip" download>Download app for Linux</a>
+</p>-->
 
-<h3>Step 2. Prepare your data</h3>
-<p>Short explanation.</p>
-<figure><img src="images/step2.png" alt="Step 2"><figcaption>What you should see.</figcaption></figure>
+<p class="dl-buttons">
+  <a href="https://github.com/mkachlicka/ACATapp/releases/latest/download/ACAT-macOS.zip">Download app for Mac OS</a>
+  <a href="https://github.com/mkachlicka/ACATapp/releases/latest/download/ACAT-Windows.zip">Download app for Windows</a>
+  <a href="https://github.com/mkachlicka/ACATapp/releases/latest/download/ACAT-Linux.zip">Download app for Linux</a>
+</p>
+
+<p>Depending on your internet speed, this might take from a few seconds to a couple of minutes. You should be able to find the app in your "Downloads" folder.
+  <ul>
+    <li>ACAT-macOS.zip file containes ACAT and ACAT.app files</li>
+    <li>ACAT-Windows.zip file contains ACAT and ACAT.exe files</li>
+    <li>ACAT-Linux.zip contains ACAT file</li>
+  </ul>
+</p>
+
+<!--<figure><img src="images/step1.png" alt="Step 1"><figcaption>What you should see.</figcaption></figure>-->
+
+<!--<pre>git clone https://github.com/mkachlicka/ACAT.git</pre>-->
+
+<h3>Step 2. Install the app on your computer.</h3>
+<p>Installation includes all the required files and packages and should take only a few seconds.</p>
+
+<h4>Mac OS</h4>
+<p>
+  <ol>
+    <li>Unzip ACAT-macOS.zip file. You should see two files there: ACAT and ACAT.app</li>
+    <li>To open the app for the first time after downloading it, right-click on the ACAT.app and select "Open". A pop-up window will show up with a notification saying "“ACAT.app” can’t be opened because Apple cannot check it for malicious software". To by-pass this notification, please right-click on the ACAT.app and select "Open". When a pop-up window opens, click "Open" again. It will take a few seconds to open the app.</li>
+    <li>To open the app, right-click on the ACAT.app and select "Open". It will take a few seconds to open the app.</li>
+  </ol></p>
+
+<figure><img src="images/fig1.png" alt="Step 2"><figcaption>The app opens with the main GUI and Help window. You can close the Help window and open it again, if needed.</figcaption></figure>
+
+<h4>Windows</h4>
+<p>TBC.</p>
+
+
+<h4>Linux</h4>
+<p>TBC.</p>
+
 
 <h3>Step 3. Run the analysis</h3>
 <p>Short explanation.</p>
