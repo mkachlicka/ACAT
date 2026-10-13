@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A-CAT: Automated Comprehensibility Assessment Tool</title>
+
+<style>
+  :root { 
+    --bg:#fff; 
+    --fg:#000; 
+    --muted:#555; 
+    --line:#ddd; 
+    --accent:#c8102e; 
+    --code:#f2f2f2; 
+    --btn:#000; 
+    --btn-fg:#fff; }
+
+  :root[data-theme="dark"] { 
+    --bg:#000; 
+    --fg:#fff; 
+    --muted:#aaa; 
+    --line:#333; 
+    --accent:#ff4d4d; 
+    --code:#111; 
+    --btn:#fff; 
+    --btn-fg:#000; }
+
+  body { 
+    max-width:760px; 
+    margin:0 auto; 
+    padding:40px 20px 60px; 
+    font:18px/1.6 Georgia, serif; 
+    color:var(--fg); 
+    background:var(--bg); }
+
+  h1 { 
+    font-size:2.2rem; 
+    line-height:1.2; 
+    text-align:center; 
+    margin:0 0 .4em; }
+
+  h2 { 
+    margin-top:2em; 
+    border-bottom:1px solid var(--line); 
+    padding-bottom:4px; }
+
+  h3 { 
+    margin:1.6em 0 .3em; }
+
+  .center { 
+    text-align:center; }
+
+  .affil { 
+    color:var(--muted); 
+    font-size:.95rem; }
+
+  sup { 
+    color:var(--accent); 
+    font-weight:bold; }
+
+  .buttons a { 
+    display:inline-block; 
+    margin:4px; 
+    padding:8px 18px; 
+    border-radius:20px; 
+    background:var(--btn); 
+    color:var(--btn-fg); 
+    text-decoration:none; 
+    font:15px sans-serif; }
+
+  .buttons a:hover { 
+    background:var(--accent); 
+    color:#fff; }
+
+  a { 
+    color:var(--accent); }
+
+  img { 
+    max-width:100%; 
+    border-radius:6px; }
+
+  figure { 
+    margin:1em 0; }
+
+  figcaption { 
+    color:var(--muted); 
+    font-size:.9rem; 
+    text-align:center; }
+
+  pre { 
+    background:var(--code); 
+    padding:14px; 
+    overflow-x:auto; 
+    font-size:14px; 
+    border-radius:6px; }
+
+  footer { 
+    margin-top:3em; 
+    padding-top:1em; 
+    border-top:1px solid var(--line); 
+    color:var(--muted); 
+    font:14px sans-serif; 
+    text-align:center; }
+
+  #theme { 
+    position:fixed; 
+    top:14px; 
+    right:14px; 
+    width:40px; 
+    height:40px; 
+    border-radius:50%; 
+    border:1px solid var(--line);
+    background:var(--bg); 
+    color:var(--fg); 
+    font-size:18px; 
+    cursor:pointer; }
+
+  #theme:hover { 
+    border-color:var(--accent); }
+
+</style>
+
+<script>
+  // apply saved theme before page paints (no flash); falls back to system setting
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('theme'); } catch (e) {}
+    if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+</head>
+
+<body>
+
+<button id="theme" type="button" aria-label="Toggle light/dark mode" title="Toggle light/dark mode">&#9680;</button>
+
+<h1>Introducing A Transparent, Locally Usable Tool for Automated Assessment of L2 Speech Comprehensibility</h1>
+
+<!-- Authors: numbers match the affiliations below -->
+<p class="center">Kazuya Saito<sup>1,2</sup>, Magdalena Kachlicka<sup>1,3,4</sup></p>
+<p class="center affil"><sup>1</sup>University College London &nbsp;&nbsp; <sup>2</sup>Tohoku University &nbsp;&nbsp; <sup>3</sup>University of Bern &nbsp;&nbsp; <sup>4</sup>Birkbeck, University of London</p>
+
+<p class="center buttons">
+  <a href="#">Paper</a>
+  <a href="https://github.com/mkachlicka/ACAT">Supplementary</a>
+  <a href="https://github.com/mkachlicka/ACAT/tree/main/datasets">Code</a>
+  <!--<a href="https://github.com/mkachlicka/ACAT/blob/main/acat_clean_final.ipynb">Notebook</a>-->
+</p>
+
+<!-- 1. Video (GIF loaded straight from your GitHub repo; change the file name if you want a different GIF) -->
+<figure>
+  <img src="https://raw.githubusercontent.com/mkachlicka/ACAT/main/images/acatlogo.gif" alt="A-CAT demo">
+  <!--<figcaption>TBC.</figcaption>-->
+</figure>
+
+<!-- 2. Description -->
+<h2>Description</h2>
+<p>Describe what A-CAT is, what it takes as input, and what it returns. Two or three short paragraphs.</p>
+
+<!-- 3. Abstract -->
+<h2>Abstract</h2>
+<p>Paste your abstract here.</p>
+
+<!-- 4. Guide with pictures -->
+<h2>How to use</h2>
+
+<h3>Step 1. Get the code</h3>
+<p>Short explanation.</p>
+<pre>git clone https://github.com/mkachlicka/ACAT.git</pre>
+<figure><img src="images/step1.png" alt="Step 1"><figcaption>What you should see.</figcaption></figure>
+
+<h3>Step 2. Prepare your data</h3>
+<p>Short explanation.</p>
+<figure><img src="images/step2.png" alt="Step 2"><figcaption>What you should see.</figcaption></figure>
+
+<h3>Step 3. Run the analysis</h3>
+<p>Short explanation.</p>
+<figure><img src="images/step3.png" alt="Step 3"><figcaption>What you should see.</figcaption></figure>
+
+<h3>Step 4. Read the results</h3>
+<p>Short explanation of how to interpret the output.</p>
+<figure><img src="images/step4.png" alt="Step 4"><figcaption>What you should see.</figcaption></figure>
+
+<footer>
+  Last updated: <span id="updated">13 October 2026</span>
+  &middot; <a href="https://github.com/mkachlicka/ACAT">GitHub repository</a>
+</footer>
+
+<script>
+  // theme toggle
+  document.getElementById('theme').addEventListener('click', function () {
+    var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+  // last-updated date: taken from the file's modified time when the server provides it
+  var d = new Date(document.lastModified);
+  if (!isNaN(d)) document.getElementById('updated').textContent =
+    d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+</script>
+</body>
+</html>
