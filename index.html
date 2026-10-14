@@ -88,6 +88,24 @@
     font-size:.9rem; 
     text-align:center; }
 
+  .img-row {
+    display: flex;
+    gap: 12px;
+    margin: 1em 0; }
+
+  .img-row figure {
+    flex: 1;
+    margin: 0;
+    min-width: 0; }
+  
+  .img-row img {
+    width: 100%;
+    height: auto;
+    display: block; }
+
+  @media (max-width: 600px) {
+    .img-row { flex-direction: column; } }
+
   pre { 
     background:var(--code); 
     padding:14px; 
@@ -257,15 +275,39 @@
 <h3>Step 2. Install the app on your computer.</h3>
 <p>Installation includes all the required files and packages and should take only a few seconds.</p>
 
+<p><b>Note:</b> Please note that the app was developed and tested mostly on Mac OS. If you encounter any problems on Windows or Linux, please let us know. We will try our best to solve those issues as soon as possible.</p>
+
 <h4>Mac OS</h4>
 <p>
   <ol>
     <li>Unzip ACAT-macOS.zip file. You should see two files there: ACAT and ACAT.app</li>
-    <li>To open the app for the first time after downloading it, right-click on the ACAT.app and select "Open". A pop-up window will show up with a notification saying "“ACAT.app” can’t be opened because Apple cannot check it for malicious software". To by-pass this notification, please right-click on the ACAT.app and select "Open". When a pop-up window opens, click "Open" again. It will take a few seconds to open the app.</li>
-    <li>To open the app, right-click on the ACAT.app and select "Open". It will take a few seconds to open the app.</li>
+    <li>To open the app for the first time after downloading it, right-click on the ACAT.app and select "Open". A pop-up window will show up with a notification saying "“ACAT.app” can’t be opened because Apple cannot check it for malicious software". Click "Ok". To by-pass this notification, please right-click on the ACAT.app again and select "Open". When another pop-up window opens, click "Open" again. It will take a few seconds to open the app.
+      <div class="img-row">
+        <figure>
+          <img src="images/mac1.png" alt="Mac step 1">
+          <figcaption>1. Right-click ACAT.app and select "Open".</figcaption>
+        </figure>
+        <figure>
+          <img src="images/mac2.png" alt="Mac step 2">
+          <figcaption>2. Click "Ok" in the warning pop-up. The app will not open.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/mac3.png" alt="Mac step 3">
+          <figcaption>3. Right-click ACAT.app again and select "Open". The app opens (this may take a few seconds).</figcaption>
+        </figure>
+      </div>
+      </li>
+    <li>To open the app after that, please right-click on the ACAT.app and select "Open". There should be no more notifications after the first use, but it will still take a few seconds to open the app.
+      <figure><img src="images/fig1.png" alt="Step 2"><figcaption>The app opens with the main GUI and Help window. You can close the Help window and open it again, if needed.</figcaption></figure>
+
+    </li>
   </ol></p>
 
-<figure><img src="images/fig1.png" alt="Step 2"><figcaption>The app opens with the main GUI and Help window. You can close the Help window and open it again, if needed.</figcaption></figure>
+
+
+<p><b>Note:</b> The app inherits the settings of your computer, so it will display in dark colours (like in the screenshots), if your computer is in dark mode.</p>
+
+
 
 <h4>Windows</h4>
 <p>TBC.</p>
@@ -275,8 +317,11 @@
 <p>TBC.</p>
 
 
-<h3>Step 3. Run the analysis</h3>
-<p>Short explanation.</p>
+<h3>Step 3. Prepare your speech recordings for scoring.</h3>
+
+
+<h3>Step 4. Use the app</h3>
+<p>Once you open the app, it is ready to use. The app will need read and write access to the folder in which you store your audio samples. </p>
 <figure><img src="images/step3.png" alt="Step 3"><figcaption>What you should see.</figcaption></figure>
 
 <h3>Step 4. Read the results</h3>
@@ -297,7 +342,7 @@
 
 <footer>
   Last updated: <span id="updated">13 October 2026</span>
-  &middot; <a href="https://github.com/mkachlicka/ACAT">GitHub repository</a>
+  <!--&middot; <a href="https://github.com/mkachlicka/ACAT">GitHub repository</a>-->
 </footer>
 
 <script>
@@ -313,8 +358,8 @@
     d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
   // citation tabs
   var citations = {
-    apa: "Saito, K., & Kachlicka, M. (2026). Introducing a transparent, locally usable tool for automated assessment of L2 speech comprehensibility. Journal Name, volume(issue), pages.",
-    bibtex: "@article{saito2026acat,\n  author  = {Saito, Kazuya and Kachlicka, Magdalena},\n  title   = {Introducing a Transparent, Locally Usable Tool for Automated Assessment of L2 Speech Comprehensibility},\n  journal = {Journal Name},\n  year    = {2026}\n}"
+    apa: "Saito, K., & Kachlicka, M. (2026). Introducing a transparent, locally usable tool for automated assessment of L2 speech comprehensibility. Behavior Research Methods, volume(issue), pages.",
+    bibtex: "@article{saito2026acat,\n  author  = {Saito, Kazuya and Kachlicka, Magdalena},\n  title   = {Introducing a Transparent, Locally Usable Tool for Automated Assessment of L2 Speech Comprehensibility},\n  journal = {Behavior Research Methods},\n  year    = {2026}\n}"
   };
   var citeText = document.getElementById('cite-text');
   citeText.textContent = citations.apa;
