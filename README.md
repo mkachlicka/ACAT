@@ -2,13 +2,4 @@
 
 # Automated Comprehensibility Assessment Tool (A-CAT)
 
-[Description] for MK to write up
-
-
-
-[Instruction] for MK to write up
-
-
-
-
-[Interpretation of results] for MK to write up
+Please go to the website to see description of the app and guidelines on how to use it: <https://mkachlicka.github.io/ACAT/>
